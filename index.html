@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+        <title>OpenWings Ensinos Aeronaúticos</title>
+    </head>
+    <body>
+        <header>
+            <div class="notch-correct"></div>
+            <div class="header-container">
+                <img id="openwings-logo" src="images/logo-openwings.png" alt="logo da openwings">
+                <div class="logo-div">
+                    <img id="whatsapp-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFQElEQVR4nO1ZaYhbVRS+Oq1LxaUzTc59yTvnTcdxYSi4FK1YF1T0hyAI+kP0hyhaXHDfKsUNHa1VRETQqYiCijXM5Jxkhpb+GkUFUURsxV0ErVarU5fitKa2lZOZ0eS+l+QleRl/OB9cCOSec8859571GTOHOcyhfdxn9gfJLgPBlSA4bIU2A9N2EPzTCpb0t2X6CBjzVnCVV6DlJme6zH+NHsGMFRoEoW+s0L6mFtN3IPiYV+yjWRfcz/ndlvFpYNzVtOChhSVgXGtzNjUrwluhi0FoW/uCVy9g2u4JXdY5yXOmywo+VUeIHVZonce0AvL+yWWLDi2dr0t/26J/UprpKiv4imX8rc6NPFemSxL96/sPnHLAyEO/LAu9EQ6Jy8/P+QeD+FcA46c1bmNDM/zqI2e6ooTXCAMFvHsgN3BAy7zHzTwreCsITUYpkchNWKYnw8LTNi+Pp5mEACP+Esv0eVgJXNsWY4/9Cy3TXsfyHwMHvSZh2JxNAeP7rhJpDi5tieHCXN/hlnGra3ko0GLTIVh1ducmQGjCK3qLmmYGTE+4b96Kf4a7L1Xw+9NM5yQVx2HEX+L6BAg92ySTvnSEYw2G9jHdZYX2/JNZE4ocloPbXONlOIPxGQjd60SEn/RJVe5JF/Bc1z88oauTUMAMLZ0PQp9Vlx64Jh7xPrOfxnYnudzibgOh1yNC6weJKGCUf3ClY8QtWjQ2JEyN9B7nvL9J1/rl+M20OyoJpZhOTUIBr+gtsIy/V0WkQnBKY0LGmx0FOKTkWGBr1zRtxu4KWKZXnRteaRoBGF9yFLixRnbeWaMMuMEkBI9phaPAcAwF6N0qofL+mZH7hN4MKcA4lmSjApJdVs2fPoxBVN2c1Go4bAEvdxXwR/1sUsLPhHM3GppGAMFfKokCDo6I3Dhu5mnUaZQr2q2CbbV/7YqhAP1cSZTJZ3pq7dWoYIX+qrji3UkWecF4cJCjwM6GRG4OSOXxyLr7mR52/OCHTD5zdBIKpELRDn9srADTO1VaF+jsugQakYQ2uknHK9KJUdszHBwPjPfHaea9Ai1vOlFqS+eE0Tsa0dAYLXRTv153OaRWRCW1KAh9O23NkhV6wSsGx9biC0LXOz62Lo4C1zjW3NCQqGzZDFqhryJywyYQ/5Lpev+tiP/3aMLS9x5SwO0EmW5vKIhaxHl3pXqO7M6JgOm9Wlm63sqOZP1KXt3r+w9zK+KMBCfEkUMdeVOzz+hfA3gLgOkZt1Ktt0BoQovIeiWN3q67pya05nC9XwWLq8QUj+AsK/h2LCWYHqmk1eJRk5bjUw/EPlyd0gr+6hxyj2kBHuPpWuCplcPCozryoFt+qEKOH/6RLiyGpg4Gxgfd+G7agI5fppQpd3GrtceAiP56+uZKTvh8vOkDw28QR02HARz0hsaWjFtD/UgcaGVZySgteJPpIFIFvz/cRtJeYLygpeuennVWvtmBjkhujNGpRg0febQlhtoDuKXBzH9aAugUWUOlvmedc7YqOGmwYFxToz19LVYPHAVgesgJYZ/oVDn6QwZ+P61IdzOCa26BSKtPlQxtzVzdgi7ewpIWdcB0p5fH8xaNZo/SiZoKmx6mPi0KNfKob9X8MMLl5Le6ZcvPWKeqxp+lBUxbLAfntyx4hfUvapD2J4HpDcv4vDv2aHHtUKv3yDGHmiSgc0hH4AnNAfo0dOZT+Ta13ZwuOzY3b3H9uIGrWhrc1oMVHAfGl20er9VBa9z3qF2YZf86EBoq10BMX2h7Wv7EKvi1+hUwvag9QidD8hzm8H/D3+LHK5xWTajmAAAAAElFTkSuQmCC" alt="icone whatsapp">
+                    <a href="https://www.instagram.com/openwingsaju/"><img id="instagram-logo" src="data:image/png;base64,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" alt="icone instagram"></a>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="whatsapp-escolha">
+                <p>Contatos</p>
+                <div class="whatsapp-1">
+                    <div class="img-area">
+                        <img id="whatsapp-contact" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACWklEQVR4nO2WT4iNYRTGr7mkMEwRKQlTmAlZWUg0Q4mtvzGy0GQxCyZ/RspK07DQzBbJLEVEhqS7IEX+bBETCzWhUf4LMT8dnns7fd253/t+WM19Vve+7/Oc83zv955zvlyuiioiAEwHdgJ9wGPgA/AZ6AeuA7uB2f8j8WTgCPCVdPwEzgJz/lXyZuCNC34Z2AEsAKYAk4AGYKsSfxf3E7Dub5NvcwELwMIATT1wXpohYG/W5CuAbwp0FKiJ1O/TiQ1FnwRQB7xW8mOx5hMmiq9jZoywS8JbQF5reQU8GHMawAXF6g0V1Kq07OiWuPVD7qavjTBQr3v0A5gVIthYfPrE+ktnoC/UgLRWHYZdIeRekUu3FxiV6AFfgNERBlqkuxZCvinyysT6HWegPTS5tNYnDP0h5KciNyTWNzkDqzNU1e9qCCE/E3lemb2L2nsBzIhs5Yb3IeS7IjeV2ZuoIWR46E3ab+CAJSujWyTNoxADJ0XuqFBWz8Wxcu0A5rpX91Gds3RJgVbtXQoxsFnkeylj+QHDw1pwreNf0XpriIHxwDsJllfgjdHTFyelxznHWyxDNlempRowAIcVqJBLATAWWA8cB84A24vHr/Z9Q7F60mKVAOyP6t/DwAaZ4gzat0OMsCDhloyJ8/qCQnOgKUY8Tm3X3ttUYD7QBpyudCecfqnrmvbeW2Ldr3HigTIX7L7qvVnmGoFVupC3He8VsCwquQHoTiQc1DTrAd6SDusNnda0clnAn054FdijEqpJlOgG4ISe1tr2Ew2wU6qGCZkS+/ou/aliJOAXHxdFslvKXn4AAAAASUVORK5CYII=">
+                    </div>
+                    <div class="name-area">
+                        <p>Sergio</p>
+                    </div>
+                </div>
+                <div class="whatsapp-2">
+                    <div class="img-area-2">
+                        <img id="whatsapp-contact" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACWklEQVR4nO2WT4iNYRTGr7mkMEwRKQlTmAlZWUg0Q4mtvzGy0GQxCyZ/RspK07DQzBbJLEVEhqS7IEX+bBETCzWhUf4LMT8dnns7fd253/t+WM19Vve+7/Oc83zv955zvlyuiioiAEwHdgJ9wGPgA/AZ6AeuA7uB2f8j8WTgCPCVdPwEzgJz/lXyZuCNC34Z2AEsAKYAk4AGYKsSfxf3E7Dub5NvcwELwMIATT1wXpohYG/W5CuAbwp0FKiJ1O/TiQ1FnwRQB7xW8mOx5hMmiq9jZoywS8JbQF5reQU8GHMawAXF6g0V1Kq07OiWuPVD7qavjTBQr3v0A5gVIthYfPrE+ktnoC/UgLRWHYZdIeRekUu3FxiV6AFfgNERBlqkuxZCvinyysT6HWegPTS5tNYnDP0h5KciNyTWNzkDqzNU1e9qCCE/E3lemb2L2nsBzIhs5Yb3IeS7IjeV2ZuoIWR46E3ab+CAJSujWyTNoxADJ0XuqFBWz8Wxcu0A5rpX91Gds3RJgVbtXQoxsFnkeylj+QHDw1pwreNf0XpriIHxwDsJllfgjdHTFyelxznHWyxDNlempRowAIcVqJBLATAWWA8cB84A24vHr/Z9Q7F60mKVAOyP6t/DwAaZ4gzat0OMsCDhloyJ8/qCQnOgKUY8Tm3X3ttUYD7QBpyudCecfqnrmvbeW2Ldr3HigTIX7L7qvVnmGoFVupC3He8VsCwquQHoTiQc1DTrAd6SDusNnda0clnAn054FdijEqpJlOgG4ISe1tr2Ew2wU6qGCZkS+/ou/aliJOAXHxdFslvKXn4AAAAASUVORK5CYII=">
+                    </div>
+                    <div class="name-area-2">
+                        <p>Everton</p>
+                    </div>
+                </div>
+                <div class="onlycall">
+                    <div class="img-area-3">
+                        <img id="whatsapp-contact" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADh0lEQVR4nO2ZS0hVURSGt70Mo5TK0rQig0ZChYM0aVBEkygIqSARUxKFXsNoLI4qjMJKqEnNKjIregyiaGAPQRMiegx6UBFUWlloD/ti4Tq4Mc+559TxtoX7D+/99z7/Pnuvtf69jjEppPD/AKwH2oF+oAsoMWMJwCSgiT/RA+SZsQAgE7iuwvuAHcBMoFV/u2xcB5AD3FfBr4GiYf+91/+qjasApgEdKvQhMH8ETrn+/xGYZ1wDkA7cUpEPgBkB3BZnjxjQoOJeAPkJuHLEPii/0rgEoFuFrQzJr1C+jMs1roDBOiHIijDmko5pMa4AeKqiCiOMydegF2w2LoChAC6POK5Gxz02LoDBoic4GXGcFErBTyBt9BSGBLAQ+AV8BqZGGLdVF9JuXAFDtqQuJH8y8Ny5NAxs8s47MCEEf6/yO4FxxhUA49WaCGoTcGcBn5S72rgGoEzFvQEyAnjNyms1LgJIA+6qyH0BsdGrnG3GVQBLge/AALDCh7PLumgtMK4CqLcCP8Nn5y4q517QMXThqtulQpt8OFlWcjgvycK4CGCJXnUFVQGF9J1ymp2o7iNBFqAiZUHLfDglVvA3GlcBHLJS8ogdFGCVtXsHjIsAJgI3VGSbX2AD6zTbCRqMiwCygWcq8ookAx/eRmsxjU7GDLAIeKsiT/tlKd0Z75gdczKbAYu1CAqO+71xjZleKzVn+Hi7KjWdA8ATMa5JWYgKWA58SRTYQLGVmtvtPpkYTatODcdZYHayFrMG+OYtJmBnCqyi2a1XY88RoHFXqTfNGstRS0dzS7IWs8FazImAmBEHcGHYWxfBe8SADuPO1WTiQXoJOcnaGe+YnQnIZuLNdmrcHJX7TIJ5q61YlGZgxagtwnpoqfXQqwnuMekR5s2zemfokZwTm/AAX+al5ttxdh8ZjCGvE9rjZ5XirjNeM+JVnA8Ecq0k0RnXvIkcwE19YL+fa/7LuafrvF/jmjOMNztsne0jcVy8gN06X1s8SsM/uMpqjkvVLv2HuYqtVL82XqXhk4BXwcWG7AemRJyjwEokB0dPbbhrs/QAflj3mtqQTcBs4JGOuybHNjmqg0UVAXes2JHGRp1fr5nBKu/Zm44oPelRh1b4Musto43zU/qhtVA/j4t7fuml26SZyKiQYyUfh7RxLl8B/CCpPNOMBWgwbwfOaXbrU/dbH8XSpJCCiRe/AQGfCXGn/vU8AAAAAElFTkSuQmCC">
+                    </div>
+                    <div class="name-area-3">
+                        <p>Somente ligações</p>
+                    </div>
+                </div>
+                <div class="span-area">
+                    <span>Fechar</span>
+                </div>
+            </div>
+            <div class="promocao">
+                <p>Estamos com matriculas abertas para março de 2023, venha realizar o seu sonho de ser piloto.</p>
+                <div class="promo-button">
+                    <span>Fechar</span>
+                </div>
+            </div>
+            <div class="anac-rank">
+                <p>Somos a escola com a taxa de 100% de aprovação na banca da Anac.</p>
+            </div>
+            <div class="section-contain-1">
+                <div class="image-contain-1">
+                    <img id="openwings-1" src="images/open-1.png" alt="">
+                </div>
+                <div class="text-contain-1">
+                    <p id="p1-1">Sobre nós</p>
+                    <p id="p2-1">Lorem ipsum dolor sit amet,  donec ornare leo quis erat efficitur gravida. Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                </div>
+            </div>
+            <div class="section-contain-2">
+                <div class="image-contain-2">
+                    <img id="openwings-2" src="images/open-2.png" alt="">
+                </div>
+                <div class="text-contain-2">
+                    <p id="p1-2">Nossa Estrutura</p>
+                    <p id="p2-2">Lorem ipsum dolor sit amet,  donec ornare leo quis erat efficitur gravida. Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                </div>
+            </div>
+            <div class="section-contain-3">
+                <div class="image-contain-3">
+                    <img id="openwings-3" src="images/open-3.png" alt="">
+                </div>
+                <div class="text-contain-3">
+                    <p id="p1-3">Instrução detalhada</p>
+                    <p id="p2-3">Lorem ipsum dolor sit amet,  donec ornare leo quis erat efficitur gravida. Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                </div>
+            </div>
+            <div class="section-contain-4">
+                <div class="image-contain-4">
+                    <img id="openwings-4" src="images/open-4.png" alt="">
+                </div>
+                <div class="text-contain-4">
+                    <p id="p1-4">Contatos com aeronaves</p>
+                    <p id="p2-4">Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                </div>
+            </div>
+            <div class="section-contain-5">
+                <div class="image-contain-5">
+                    <img id="openwings-5" src="images/open-5.png" alt="">
+                </div>
+                <div class="text-contain-5">
+                    <p id="p1-5">Onde estamos localizados?</p>
+                    <p id="p2-5">Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                    <div class="section-contain-button-5">
+                        <a href="https://www.google.com/maps/place/Aeroclube+de+Sergipe/@-10.9035319,-37.082972,16.5z/data=!4m6!3m5!1s0x71ab31c51606f9d:0x30b7c5eb1bc8dbb9!8m2!3d-10.9030771!4d-37.0817604!16s%2Fg%2F1tk_jxqm"><button id="button-map">Veja no mapa</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-contain-1-desktop">
+                <div class="image-contain-1-desktop">
+                    <img id="openwings-1-desktop" src="images/open-1.png" alt="">
+                </div>
+                <div class="text-contain-1-desktop">
+                    <p id="p1-1-desktop">Sobre nós</p>
+                    <p id="p2-1-desktop">Lorem ipsum dolor sit amet,  donec ornare leo quis erat efficitur gravida. Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                </div>
+            </div>
+            <div class="section-contain-2-desktop">
+                <div class="text-contain-2-desktop">
+                    <p id="p1-2-desktop">Nossa Estrutura</p>
+                    <p id="p2-2-desktop">Lorem ipsum dolor sit amet,  donec ornare leo quis erat efficitur gravida. Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                </div>
+                <div class="image-contain-2-desktop">
+                    <img id="openwings-2-desktop" src="images/open-2.png" alt="">
+                </div>
+            </div>
+            <div class="section-contain-3-desktop">
+                <div class="image-contain-3-desktop">
+                    <img id="openwings-3-desktop" src="images/open-3.png" alt="">
+                </div>
+                <div class="text-contain-3-desktop">
+                    <p id="p1-3-desktop">Instrução detalhada</p>
+                    <p id="p2-3-desktop">Lorem ipsum dolor sit amet,  donec ornare leo quis erat efficitur gravida. Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                </div>
+            </div>
+            <div class="section-contain-4-desktop">
+                <div class="text-contain-4-desktop">
+                    <p id="p1-4-desktop">Contatos com aeronaves</p>
+                    <p id="p2-4-desktop">Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                </div>
+                <div class="image-contain-4-desktop">
+                    <img id="openwings-4-desktop" src="images/open-4.png" alt="">
+                </div>
+            </div>
+            <div class="section-contain-5-desktop">
+                <div class="image-contain-5-desktop">
+                    <img id="openwings-5-desktop" src="images/open-5.png" alt="">
+                </div>
+                <div class="text-contain-5-desktop">
+                    <p id="p1-5-desktop">Onde estamos localizados?</p>
+                    <p id="p2-5-desktop">Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                    <div class="section-contain-button-5-desktop">
+                        <a href="https://www.google.com/maps/place/Aeroclube+de+Sergipe/@-10.9035319,-37.082972,16.5z/data=!4m6!3m5!1s0x71ab31c51606f9d:0x30b7c5eb1bc8dbb9!8m2!3d-10.9030771!4d-37.0817604!16s%2Fg%2F1tk_jxqm"><button id="button-map">Veja no mapa</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="answer-div1">
+                <p id="question-1">Quais são as matérias do curso?</p>
+                <p id="answer-1">Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                <div class="button-area-question-1">
+                    <button id="question-btn-1">Fechar</button>    
+                </div>
+            </div>
+            <div class="answer-div2">
+                <p id="question-2">Quanto tempo de curso?</p>
+                <p id="answer-2">Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                <div class="button-area-question-2">
+                    <button id="question-btn-2">Fechar</button>    
+                </div>
+            </div>
+            <div class="answer-div3">
+                <p id="question-3">Quais são os meios de pagamento?</p>
+                <p id="answer-3">Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                <div class="button-area-question-3">
+                    <button id="question-btn-3">Fechar</button>    
+                </div>
+            </div>
+            <div class="answer-div4">
+                <p id="question-4">Quais são os processos para se tornar piloto?</p>
+                <p id="answer-4">Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                <div class="button-area-question-4">
+                    <button id="question-btn-4">Fechar</button>    
+                </div>
+            </div>
+            <div class="answer-div5">
+                <p id="question-5">A banca da anac tem validade?A banca da anac tem validade?</p>
+                <p id="answer-5">Nullam in consequat diam. Nam porttitor in eros in posuere. Vestibulum eleifend bibendum elementum. Nunc luctus sem condimentum imperdiet mattis. Cras sollicitudin, nisi at posuere malesuada, risus lacus consequat quam, vitae maximus turpis sapien at dui. Mauris lacinia cursus purus.</p>
+                <div class="button-area-question-5">
+                    <button id="question-btn-5">Fechar</button>    
+                </div>
+            </div>
+            <div class="common-questions-container">
+                <div class="perguntas-frequentes">
+                    <p>Perguntas frequentes</p>
+                </div>
+                <div class="common-question">
+                    <div class="question-1">
+                        <div class="question-number-1">
+                            <p>1</p>
+                        </div>
+                        <div class="question-text-1">
+                            <p>Quais são as matérias do curso?</p>
+                        </div>
+                    </div>
+                    <div class="question-2">
+                        <div class="question-number-2">
+                            <p>2</p>
+                        </div>
+                        <div class="question-text-2">
+                            <p>Quanto tempo de curso?</p>
+                        </div>
+                    </div>
+                    <div class="question-3">
+                        <div class="question-number-3">
+                            <p>3</p>
+                        </div>
+                        <div class="question-text-3">
+                            <p>Quais são os meios de pagamento?</p>
+                        </div>
+                    </div>
+                    <div class="question-4">
+                        <div class="question-number-4">
+                            <p>4</p>
+                        </div>
+                        <div class="question-text-4">
+                            <p>Quais são os processos para se tornar piloto?</p>
+                        </div>
+                    </div>
+                    <div class="question-5">
+                        <div class="question-number-5">
+                            <p>5</p>
+                        </div>
+                        <div class="question-text-5">
+                            <p>A banca da anac tem validade?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="opinion-area">
+                <div class="text-opinion">
+                    <p>Opinões de alunos</p>
+                </div>
+                <div class="images-opinion-area">
+                    <div class="up-imagem">
+                        <div class="imagem-opinion-1">
+                            <img id="opinion-1" src="images/opinion-1.png" alt="">
+                        </div>
+                        <div class="imagem-opinion-2">
+                            <img id="opinion-2" src="images/opinion-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="mid-images">
+                        <div class="imagem-opinion-3">
+                            <img id="opinion-3" src="images/opinion-1.png" alt="">
+                        </div>
+                        <div class="imagem-opinion-4">
+                            <img id="opinion-4" src="images/opinion-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="down-imagem">
+                        <div class="imagem-opinion-5">
+                            <img id="opinion-5" src="images/opinion-1.png" alt="">
+                        </div>
+                        <div class="imagem-opinion-6">
+                            <img id="opinion-6" src="images/opinion-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-area">
+                <div class="footer-credits">
+                    <p>Copyright © 2023 OpenWings Ensinos Aeronáuticos.</p>
+                    <p>Criado por <a href="https://github.com/Wilgner-Farias">Wilgner Farias</a>.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
